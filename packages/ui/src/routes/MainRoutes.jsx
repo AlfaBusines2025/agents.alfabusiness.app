@@ -1,8 +1,8 @@
 import { lazy } from 'react'
 
 // project imports
-import MainLayout from '@/layout/MainLayout'
 import Loadable from '@/ui-component/loading/Loadable'
+import ProtectedMainLayout from './ProtectedMainLayout'
 
 // chatflows routing
 const Chatflows = Loadable(lazy(() => import('@/views/chatflows')))
@@ -46,7 +46,7 @@ const Executions = Loadable(lazy(() => import('@/views/agentexecutions')))
 
 const MainRoutes = {
     path: '/',
-    element: <MainLayout />,
+    element: <ProtectedMainLayout />,
     children: [
         {
             path: '/',
